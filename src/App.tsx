@@ -1,10 +1,15 @@
 import React from 'react';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
+const router = createBrowserRouter([
+  {
+    path: "/home-workout",
+    element: <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -20,6 +25,12 @@ function App() {
         </a>
       </header>
     </div>
+  },
+]);
+
+function App() {
+  return (
+    <RouterProvider router={router} />
   );
 }
 
