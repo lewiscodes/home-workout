@@ -3,6 +3,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Workout from './pages/workout'
 import logo from './logo.svg';
 import './App.css';
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       </header>
     </div>
   },
+  {
+    path: "/home-workout/workout",
+    element: <Workout />
+  }
 ]);
 
 function App() {
